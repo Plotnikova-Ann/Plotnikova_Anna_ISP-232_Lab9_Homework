@@ -104,63 +104,63 @@
 //        Thread.Sleep(1000); 
 //    }
 //}
-static void Task5_NullHandling()
-{
-    Console.WriteLine("\n=== Задание 5: Работа с null ===");
-    string?[] testStrings = {
-        "Hello World",
-        null,
-        "   ",
-        "",
-        "Normal String",
-        null,
-        "Another test string with spaces"
-    };
-    Console.WriteLine("Обработка массива строк:");
-    foreach (string? str in testStrings)
-    {
-        PrintLength(str);
-    }
-    Console.WriteLine("\nДополнительные примеры:");
-    string? userInput = GetUserInputSimulation();
-    PrintLength(userInput);
-    string? fromDatabase = GetFromDatabaseSimulation(1); 
-    PrintLength(fromDatabase);
-    fromDatabase = GetFromDatabaseSimulation(999); 
-    PrintLength(fromDatabase);
-}
-static void PrintLength(string? input)
-{
-    if (input == null)
-    {
-        Console.WriteLine(" Строка отсутствует (null)");
-    }
-    else if (string.IsNullOrWhiteSpace(input))
-    {
-        Console.WriteLine(" Строка пустая или состоит только из пробелов");
-    }
-    else
-    {
-        Console.WriteLine($" Длина строки '{input.Trim()}': {input.Trim().Length} символов");
-    }
-}
-static string? GetUserInputSimulation()
-{
-    Random rnd = new Random();
-    return rnd.Next(0, 3) switch
-    {
-        0 => "Пользовательский ввод",
-        1 => null,
-        _ => "   "
-    };
-}
-static string? GetFromDatabaseSimulation(int id)
-{
-    return id switch
-    {
-        1 => "Данные из базы",
-        2 => null,
-        3 => "   ",
-        _ => null 
-    };
-}
+//static void Task5_NullHandling()
+//{
+//    Console.WriteLine("\n=== Задание 5: Работа с null ===");
+//    string?[] testStrings = {
+//        "Hello World",
+//        null,
+//        "   ",
+//        "",
+//        "Normal String",
+//        null,
+//        "Another test string with spaces"
+//    };
+//    Console.WriteLine("Обработка массива строк:");
+//    foreach (string? str in testStrings)
+//    {
+//        PrintLength(str);
+//    }
+//    Console.WriteLine("\nДополнительные примеры:");
+//    string? userInput = GetUserInputSimulation();
+//    PrintLength(userInput);
+//    string? fromDatabase = GetFromDatabaseSimulation(1); 
+//    PrintLength(fromDatabase);
+//    fromDatabase = GetFromDatabaseSimulation(999); 
+//    PrintLength(fromDatabase);
+//}
+//static void PrintLength(string? input)
+//{
+//    if (input == null)
+//    {
+//        Console.WriteLine(" Строка отсутствует (null)");
+//    }
+//    else if (string.IsNullOrWhiteSpace(input))
+//    {
+//        Console.WriteLine(" Строка пустая или состоит только из пробелов");
+//    }
+//    else
+//    {
+//        Console.WriteLine($" Длина строки '{input.Trim()}': {input.Trim().Length} символов");
+//    }
+//}
+//static string? GetUserInputSimulation()
+//{
+//    Random rnd = new Random();
+//    return rnd.Next(0, 3) switch
+//    {
+//        0 => "Пользовательский ввод",
+//        1 => null,
+//        _ => "   "
+//    };
+//}
+//static string? GetFromDatabaseSimulation(int id)
+//{
+//    return id switch
+//    {
+//        1 => "Данные из базы",
+//        2 => null,
+//        3 => "   ",
+//        _ => null 
+//    };
+//}
